@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="70c42dd2-60e4-4b8c-ad16-535195861a73" />
+          <option name="name" value="localhost-XAMPP (DDL)" />
+          <option name="languageId" value="MySQL" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/.idea/dataSources/5b3a2ccd-bf43-4053-ad3e-e6a8ba4c9f75/storage_v2/_src_/schema" />
+            </array>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

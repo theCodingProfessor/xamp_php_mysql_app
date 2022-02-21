@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>GET: PHP MySQL App</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<link rel="stylesheet" href="./css/data_app.css">
+    <title>GET: PHP MySQL App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/data_app.css">
 </head>
 <body>
 <br/>
@@ -31,10 +31,11 @@
         <div class="col-sm-1"></div> <!-- left main grid column -->
         <div class="col-sm-10">
             <div class="container-fluid">
-            <form action="response_get.php" method="get"><br/>
-            <textarea type="text" name="response_text" id="response_text" placeholder="Insert text here..." rows="2" cols="80"></textarea>
-            <input type="submit" value="VIEW GET response">
-            </form>
+                <form action="response_get.php" method="get"><br/>
+                    <label for="response_text">Input Area for Input:</label>
+                    <textarea name="response_text" id="response_text" placeholder="Insert text here..." rows="2" cols="80"></textarea>
+                    <input type="submit" value="VIEW GET response">
+                </form>
             </div></div><!-- end of sm 10 grid -->
         <div class="col-sm-1"></div> <!-- right main grid column -->
     </div> <!-- end div row  -->
@@ -44,18 +45,19 @@
     <div class="row">
         <div class="col-sm-1"></div> <!-- left main grid column -->
         <div class="col-sm-10">
- <hr/>
+            <hr/>
             <div class="container-fluid">
-            <form action="update_by_get.php" method="get"><br/>
-            <textarea type="text" name="response_text" id="response_text" placeholder="Insert text here..." rows="2" cols="80"></textarea>
-            <input type="submit" value="Send GET to Database">
-            </form>
+                <form action="update_by_get.php" method="get"><br/>
+                    <label for="response_text">Input Area for Input:</label>
+                    <textarea name="response_text" id="response_text" placeholder="Insert text here..." rows="2" cols="80"></textarea>
+                    <input type="submit" value="Send GET to Database">
+                </form>
             </div></div><!-- end of sm 10 grid -->
         <div class="col-sm-1"></div> <!-- right main grid column -->
     </div> <!-- end div row  -->
 </div> <!-- end div container  -->
 
-</hr>
+<hr/>
 <div class="container" id="footing"> <!-- footer container 10 grid -->
     <div class="row"><div class="col-sm-1"></div> <!-- left main grid column -->
         <div class="col-sm-10">
@@ -68,4 +70,3 @@
 
 </body>
 </html>
-

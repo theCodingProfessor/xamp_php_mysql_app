@@ -32,7 +32,8 @@
         <div class="col-sm-10">
             <div class="container-fluid">
             <form action="response_post.php" method="post"><br/>
-            <textarea type="text" name="response_text" id="response_text" placeholder="Insert text here..." rows="2" cols="80"></textarea>
+            <label for="response_text">Input Area for Input:</label>
+            <textarea name="response_text" id="response_text" placeholder="Insert text here..." rows="2" cols="80"></textarea>
             <input type="submit" value="VIEW POST response">
             </form>
             </div></div><!-- end of sm 10 grid -->
@@ -47,7 +48,8 @@
             <div class="container-fluid">
  <hr/>
             <form action="update_by_post.php" method="post"><br/>
-            <textarea type="text" name="response_text" id="response_text" placeholder="Insert text here..." rows="2" cols="80"></textarea>
+            <label for="response_text">Input Area for Input:</label>
+            <textarea name="response_text" id="response_text" placeholder="Insert text here..." rows="2" cols="80"></textarea>
             <input type="submit" value="Send POST to Database">
             </form>
             </div></div><!-- end of sm 10 grid -->
@@ -55,11 +57,13 @@
     </div> <!-- end div row  -->
 </div> <!-- end div container  -->
 
-</hr>
+<hr/>
 <div class="container" id="footing"> <!-- footer container 10 grid -->
     <div class="row"><div class="col-sm-1"></div> <!-- left main grid column -->
         <div class="col-sm-10">
-            <footer><article><br/><hr/><p id="footer_here"><p id="footer_here">This xamp demo is free to use &copy; Clinton Garwood 2022 -' . date("Y") . '</p></article></footer>
+            <?php
+            $thisyear = date("Y");
+            echo '<footer><article><br/><hr/><p>This xamp demo is free to use &copy; Clinton Garwood - ' . $thisyear . '.</p></article></footer>'; ?>
         </div><!-- end of sm 10 grid -->
         <div class="col-sm-1"></div> <!-- right main grid column -->
     </div> <!-- end div row  --> </div> <!-- end div container  -->

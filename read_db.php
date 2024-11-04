@@ -10,7 +10,8 @@
 </head>
 <body>
 <br/>
-<h1 class="h1_title">Query and display database rows</h1> <hr/>
+<h1 class="h1_title">Query and display database rows</h1>
+<hr/>
 <div class="container" id="naving"> <!-- web navigation container -->
     <div class="row"><div class="col-sm-1"></div> <!-- left main grid column -->
         <div class="col-sm-10">
@@ -33,20 +34,21 @@
         <div class="col-sm-10">
             <div class="container-fluid">
             <p>Database Contents: ' . '<br></p>
+<?php
 $servername = "localhost";
-$username = "reader";
-$password = "reader";
-$dbname = "my_xamp";
+$username = "read_and_write";
+$password = "read_and_write";
+$my_db = "my_xampp_new";
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $my_db);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 else {
     echo "Connected successfully";
-    $select_db = "use my_xamp";
-    $read_data = "select * from my_table;";
+    $select_db = "use my_xampp_new";
+    $read_data = "select * from xampp_table;";
     if ($conn->query($select_db) === TRUE) {
         echo " The db was selected";
         //if ($conn->query($read_data) === TRUE) {
@@ -55,7 +57,7 @@ else {
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                echo "<br>". "id: " . $row["my_key"]. " - Words: " . $row["save_text"];
+                echo "<br>". "id: " . $row["id"]. " - Words: " . $row["user_data"];
             }
         } else {
             echo " 0 results";
@@ -63,6 +65,7 @@ else {
     } else {
         echo "Error: " . $read_data . "<br>" . $conn->error; }
 }
+?>
             </div></div><!-- end of sm 10 grid -->
         <div class="col-sm-1"></div> <!-- right main grid column -->
     </div> <!-- end div row  -->
@@ -74,9 +77,9 @@ else {
         <div class="col-3">
         <div class="container-fluid">
                 <br/><p>Remove Item by Row ID</p>
-                <form action="remove_by_id.php" id="remove_db_get" method="get">
-                <input type="text" name="remove_text" id="remove_text" placeholder="Type number here..." rows="1" cols="10"></input>
-                <button type="submit" class="btn btn-danger">Remove Item</button></form>
+                <form action="remove_by_id.php" id="remove_db_get" method="GET">
+                <input type="text" name="remove_text" id="remove_text" placeholder="Type number here...">
+                <button type="submit" class="btn btn-danger">Remove Item</button>
                 </form>
             </div></div> <!-- right main grid column -->
         <div class="col-1"></div> <!-- right main grid column -->
@@ -84,9 +87,9 @@ else {
         <div class="container-fluid">
                 <br/><p>Update Item by Row ID</p>
                 <form action="update_by_id.php" id="update_db_get" method="get">
-                <input type="text" name="update_key" id="update_key" placeholder="Key #" rows="1" cols="10"></input><br/>
+                <input type="text" name="update_key" id="update_key" placeholder="Key #"><br/>
                 <textarea name="update_text" id="update_text" placeholder="Type replacement text..." rows="1" cols="30"></textarea>
-                <button type="submit" class="btn btn-warning">Update Item</button></form>
+                <button type="submit" class="btn btn-warning">Update Item</button>
                </form>
             </div> <!-- end container-fluid -->
         </div> <!-- right main grid column -->
@@ -99,8 +102,8 @@ else {
     <div class="row"><div class="col-sm-1"></div> <!-- left main grid column -->
         <div class="col-sm-10">
             <?php
-            $thisyear = date("Y");
-            echo '<footer><article><br/><hr/><p>This xamp demo is free to use &copy; Clinton Garwood - ' . $thisyear . '.</p></article></footer>'; ?>
+            $this_year = date("Y");
+            echo '<footer><article><br/><hr/><p>This xamp demo is free to use &copy; Clinton Garwood - ' . $this_year . '.</p></article></footer>'; ?>
         </div><!-- end of sm 10 grid -->
         <div class="col-sm-1"></div> <!-- right main grid column -->
     </div> <!-- end div row  --> </div> <!-- end div container  -->

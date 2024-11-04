@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "reader";
-$password = "reader";
-$my_db = "my_xamp";
+$username = "read_and_write";
+$password = "read_and_write";
+$my_db = "my_xampp_new";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password,$my_db);

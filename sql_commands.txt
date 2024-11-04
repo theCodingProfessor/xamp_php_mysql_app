@@ -1,0 +1,9 @@
+// SQL FOR NEW TABLE //
+CREATE TABLE `my_xampp_new`.`xampp_table` (`id` INT NOT NULL AUTO_INCREMENT , `user_data` VARCHAR(256) NOT NULL COMMENT 'Data from user' , PRIMARY KEY (`id`)) ENGINE = InnoDB COMMENT = 'Data Collected from a Website';
+
+// SQL FOR DATABASE USER //
+CREATE USER 'read_and_write'@'%' IDENTIFIED VIA mysql_native_password USING '***';GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO 'read_and_write'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+
+// SQL Statement to enter data into the database //
+INSERT INTO `my_xampp_new`.`xampp_table` (`user_data`)
+VALUES ('this is the first entry');

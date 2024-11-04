@@ -10,16 +10,16 @@ This app demonstrates the Apache, mySQL, PHP technology stack as a lightweight d
 ### Application Pages/Features 
 
 App Home
-![App Home](php_app_home.png)
+![App Home](img/php_app_home.png)
 
 Data Entry as GET Request
-![Enter Data as GET](php_app_input.png)
+![Enter Data as GET](img/php_app_input.png)
 
 Data Entry as POST Request
-![Enter Data as POST](php_app_input_post.png)
+![Enter Data as POST](img/php_app_input_post.png)
 
 View and Manage Database Entries
-![View and Manage Data](php_app_data_control.png)
+![View and Manage Data](img/php_app_data_control.png)
 
 ---
 
